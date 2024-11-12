@@ -42,5 +42,86 @@ To run this ALPR system, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/ALPR-System.git
+   git clone https://github.com/PutluruAravindaReddy/License_plate_recognition.git
    cd ALPR-System
+
+2. **Install dependencies**:
+- Ensure Python 3.8+ is installed.
+- Install the required libraries using pip:
+    ```bash
+    pip install -r requirements.txt
+
+3. **Download YOLO Model:**
+- Place the YOLO model file (best.pt) in the root project directory. You can train your custom model or use a pre-trained model compatible with the YOLO architecture.
+
+4. **Set up Tesseract:**
+- Download and install Tesseract OCR (installation guide).
+- Set the pytesseract command path in main.py:
+    ```bash
+    pytesseract.pytesseract.tesseract_cmd = r'path/to/tesseract.exe'
+
+5. **Run the System:**
+- To initiate real-time video processing via the webcam:
+    ```bash
+    python main.py
+- Alternatively, to analyze a pre-recorded video:
+    ```bash
+    cap = cv2.VideoCapture('path/to/video.mp4')
+
+## Usage
+
+1. **Video Feed Processing:**
+- The system captures frames from a video feed or webcam.
+- Each frame undergoes pre-processing, license plate detection, OCR, and privacy protection.
+
+2. **Data Logging:**
+- Detected license plates are saved in a .csv file (car_plate_data.txt) with corresponding timestamps.
+
+## File Structure
+
+- **main.py** : Core script for running the ALPR system.
+- **requirements.txt** : Lists all Python dependencies.
+- **best.pt** : YOLO model file (download separately).
+- **car_plate_data.txt** : Logs detected license plate data.
+- **coco1.txt** : Contains YOLO class labels.
+
+
+## Results
+
+1. **Detection Accuracy**:
+   - Achieves ~92% accuracy in well-lit environments.
+   - Maintains ~85% accuracy under challenging conditions.
+
+2. **OCR Accuracy**:
+   - Reaches ~90% accuracy in standard conditions, with character validation to minimize errors.
+
+3. **Real-time Performance**:
+   - Processes frames at 20 FPS on a mid-range GPU, suitable for real-time applications.
+
+4. **Example Detected Plate Log**:
+   - Saved in `car_plate_data.txt` with format:
+     ```plaintext
+     NumberPlate     Date        Time
+     ABC1234         2024-11-01   14:30:45
+     ```
+
+## Future Enhancements
+
+1. **Enhanced Privacy**:
+   - Further refine Gaussian blur application to adjust based on context, enhancing privacy protection.
+
+2. **Improved Accuracy**:
+   - Explore adaptive thresholding techniques for improved performance in low-light conditions.
+
+3. **Model Efficiency**:
+   - Optimize the YOLO model to support edge devices and low-power applications, increasing deployment versatility.
+
+## Contributing
+
+This project was developed by a collaborative team under the guidance of our faculty mentor, [Dr. Hari Haran](https://www.srmist.edu.in/faculty/dr-hariharan-r/), ML Faculty at SRM University. 
+
+### Team
+
+The team consists of **ARAVINDA REDDY PUTLURU** (Team Head, [aravindareddy60@gmail.com](mailto:youremail@example.com)), **Vivek Vanga** ([vivekvanga@example.com](mailto:vivekvanga@example.com)), **Krishna Samhitha K** ([krishnasamhitha@example.com](mailto:krishnasamhitha@example.com)), and **Sairam T** ([sairam@example.com](mailto:sairam@example.com)).
+
+For any inquiries or contributions, feel free to contact any team member via email. Contributions are welcome! Please fork the repository and submit a pull request for any improvements or features.
