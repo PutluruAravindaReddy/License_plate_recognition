@@ -122,6 +122,6 @@ This project was developed by a collaborative team under the guidance of our fac
 
 ### Team
 
-The team consists of **ARAVINDA REDDY PUTLURU** (Team Head, [aravindareddy60@gmail.com](mailto:youremail@example.com)), **Vivek Vanga** ([vivekvanga@example.com](mailto:vivekvanga@example.com)), **Krishna Samhitha K** ([krishnasamhitha@example.com](mailto:krishnasamhitha@example.com)), and **Sairam T** ([sairam@example.com](mailto:sairam@example.com)).
+The team consists of **ARAVINDA REDDY PUTLURU** (Team Head, [aravindareddy60@gmail.com](mailto:aravindareddy60@gmail.com)), **Vivek Vanga** ([vivekvanga@example.com](mailto:vivekvanga@example.com)), **Krishna Samhitha K** ([krishnasamhitha@example.com](mailto:krishnasamhitha@example.com)), and **Sairam T** ([sairam.temmanaboyina@gmail.com](mailto:sairam.temmanaboyina@gmail.com)).
 
 For any inquiries or contributions, feel free to contact any team member via email. Contributions are welcome! Please fork the repository and submit a pull request for any improvements or features.
